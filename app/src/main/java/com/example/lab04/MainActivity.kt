@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lab04.ui.theme.Lab04Theme
 
@@ -32,10 +35,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    Column(modifier = modifier.padding(16.dp)) {
+        Text(text = "Hello $name!")
+
+        // Componente 1: Button
+        Button(
+            onClick = { /* Acción futura */ },
+            modifier = Modifier.padding(top = 8.dp)
+        ) {
+            Text(text = "Incrementar Contador")
+        }
+    }
 }
 
 @Preview(showBackground = true)
