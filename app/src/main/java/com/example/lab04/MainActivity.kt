@@ -39,12 +39,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(16.dp)) {
         Text(text = "Hello $name!")
 
-        // Componente 1: Button
+        // Componente 1: Button modificado en rama Upgrading-component-1
         Button(
             onClick = { /* Acción futura */ },
-            modifier = Modifier.padding(top = 8.dp)
+            modifier = Modifier.padding(top = 12.dp)
         ) {
-            Text(text = "Incrementar Contador")
+            Text(text = "¡Contador Incrementado!")
         }
 
         // Componente 2: OutlinedTextField modificado en rama main
