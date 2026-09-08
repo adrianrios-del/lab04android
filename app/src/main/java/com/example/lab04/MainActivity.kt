@@ -47,12 +47,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             Text(text = "Incrementar Contador")
         }
 
-        // Componente 2: OutlinedTextField
+        // Componente 2: OutlinedTextField modificado en rama main
         OutlinedTextField(
             value = "",
             onValueChange = { },
-            label = { Text("Nombre de la película") },
-            modifier = Modifier.padding(top = 8.dp)
+            label = { Text("Escribe la película aquí...") },
+            modifier = Modifier.padding(top = 12.dp)
         )
     }
 }
